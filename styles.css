@@ -7,6 +7,14 @@ html, body {
     height: 100%;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
 header{
     background: transparent;
@@ -20,7 +28,7 @@ header{
     width: 100% 
 }
 
-.logo {
+#logo {
     font-weight:650;
     font-size: 2.3em;
     margin-left: 1rem;
@@ -29,11 +37,11 @@ header{
     transition: color 0.3s, transform 0.3s;
 }
 
-.logo:hover {
-    color: #645bff; 
+#logo:hover {
+    color: #232323; 
 }
 
-.logo span {
+#logo span {
     color: #232323;
     display: inline-block;
     max-width: 0%;
@@ -43,11 +51,9 @@ header{
     transition: max-width 0.6s ease-in;
 }
 
-.logo:hover span {
+#logo:hover span {
     max-width: 100%;
-  }
-  
-
+}
 
 #menuToggle {
     display: block;
@@ -120,7 +126,7 @@ header{
     padding: 50px;
     background: #cdcdcd;
     list-style-type: none;
-    border-radius: 12px;
+    border-radius: 12px 0px 0px 12px;
     -webkit-font-smoothing: antialiased;
     transform-origin: 100% 0%;
     transform: translateX(100%);
@@ -228,7 +234,7 @@ header{
     color: #539e43;
 }
 
-button {
+#home button {
     --primary-color: #645bff;
     --secondary-color: #fff;
     --hover-color: #111;
@@ -247,24 +253,25 @@ button {
     font-weight: bold;
     margin-top: 1em;
     cursor: pointer;
-  }
+    box-shadow: 0 8px 6px -6px #555;
+}
   
-  button .arrow-wrapper {
+#home button .arrow-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  button .arrow {
+#home button .arrow {
     margin-top: 1px;
     width: var(--arrow-width);
     background: var(--primary-color);
     height: var(--arrow-stroke);
     position: relative;
     transition: 0.2s;
-  }
+}
   
-  button .arrow::before {
+#home button .arrow::before {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -276,25 +283,87 @@ button {
     transition: 0.2s;
     padding: 3px;
     transform: rotate(-45deg);
-  }
+}
   
-  button:hover {
+#home button:hover {
     background-color: var(--hover-color);
-  }
+}
   
-  button:hover .arrow {
+#home button:hover .arrow {
     background: var(--secondary-color);
-  }
+}
   
-  button:hover .arrow:before {
+#home button:hover .arrow:before {
     right: 0;
-  }
+}
 
-  @keyframes right_to_left {
+#about {
+    background: #645bff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 25%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 60%;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #05bbaa;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+#about button {
+    --primary-color: #05bbaa;
+    --secondary-color: #111;
+    --hover-color: #fff;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-top: 1em;
+    cursor: pointer;
+    box-shadow: 0 8px 6px -6px #555;
+    transition: all .4s ease;
+}
+  
+#about button:hover {
+    background-color: var(--hover-color);
+    letter-spacing: 1px;
+}
+
+#about-buttons a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+@keyframes right_to_left {
     from {
       margin-left: 100%;
     }
     to {
       margin-left: 0;
     }
-  }
+}
