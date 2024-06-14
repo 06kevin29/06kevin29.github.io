@@ -114,13 +114,13 @@ header{
     margin-top: 0;
     position: fixed;
     width: 200px;
-    height: 9rem;
-    top: 4px;
-    right: 6px;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
     padding: 50px;
     background: #cdcdcd;
     list-style-type: none;
-    border-radius: 25px;
+    border-radius: 12px;
     -webkit-font-smoothing: antialiased;
     transform-origin: 100% 0%;
     transform: translateX(100%);
@@ -143,6 +143,15 @@ header{
 
 #menuToggle input:checked ~ ul {
     transform: translateX(0%);
+}
+
+#menu hr {
+    height: 1px;
+    color: #232323;
+    background: #232323;
+    font-size: 0;
+    border: 0;
+    margin-top: 12px;
 }
 
 #home {
