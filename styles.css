@@ -166,7 +166,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0px 20%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .home-content {
@@ -304,7 +304,7 @@ header{
     justify-content: space-between;
     padding: 100px 25%;
     box-sizing: border-box;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .about-content {
