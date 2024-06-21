@@ -302,7 +302,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 25%;
+    padding: 0px 20%;
     box-sizing: border-box;
     min-height: 100vh;
 }
@@ -357,6 +357,39 @@ header{
 #about-buttons a {
     text-decoration: none;
     color: inherit;
+}
+
+.about-circle {
+    text-align: center;
+    background-color: #05bbaa;
+    color: #645bff;
+    font-size: 4em;
+    width: 120px;
+    height: 120px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px; 
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.about-info h4 {
+    text-align: center;
+    margin: 12px 0px 0px 0px;
+}
+
+.about-info h5 {
+    text-align: center;
+    font-style: italic;
+    margin: 6px;
 }
   
 @keyframes right_to_left {
