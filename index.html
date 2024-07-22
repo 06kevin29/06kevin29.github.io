@@ -22,7 +22,7 @@
                 <ul id="menu">
                     <li id="menu-home">Home</li>
                     <li id="menu-about">About Me</li>
-                    <li id="menu-project">Projects</li>
+                    <li id="menu-projects">Projects</li>
                     <li id="menu-contact">Contact</li>
                     <hr \>
                 </ul>
@@ -151,6 +151,30 @@
             </div>
         </div>
         </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="61a90e2d-71eb-4cc6-9397-e3d541b45f7d" />
+                <input type="hidden" name="subject" value="New Contact Message" />
+                <input type="hidden" name="from_name" value="06kevin29.github.io" />
+
+                <div class="form-group-container">
+                    <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+                    </div>
+                    <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+                    </div>
+                    <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+                <button class="form-submit" type="submit">Send Message</button>
+            </form>
     </section>
 
     <noscript>Please enable Javascript!</noscript>

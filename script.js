@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggleInput = document.querySelector("#menuToggle input");
     const menuItems = document.querySelectorAll("#menu li");
     const logo = document.getElementById("logo")
+    const hireMe = document.getElementById("hire-button")
 
     function smoothScroll(target) {
         window.scrollTo({
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuItems.forEach(item => {
         item.addEventListener("click", () => {
             const targetId = item.id.replace("menu-", "");
+            console.log(targetId)
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
@@ -62,6 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     logo.addEventListener("click", () => {
         (document.getElementById("home")).scrollIntoView({
+            behavior: "smooth"
+        })
+    });
+    hireMe.addEventListener("click", () => {
+        (document.getElementById("contact")).scrollIntoView({
             behavior: "smooth"
         })
     });
