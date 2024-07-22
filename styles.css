@@ -311,7 +311,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .about-text {
@@ -326,7 +326,7 @@ header{
 
 .about-text p {
     font-size: 1.2em;
-    margin-bottom: 20px; /* Space between paragraphs */
+    margin-bottom: 20px;
 }
 
 #about button {
@@ -390,6 +390,127 @@ header{
     text-align: center;
     font-style: italic;
     margin: 6px;
+}
+
+#projects {
+    background: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20%;
+    min-height: 100vh;
+}
+
+.projects-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-pic {
+    height: 160px;
+}
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-container {
+    align-items: center;
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+}
+
+.project-container p {
+    padding: 0.4rem;
+}
+
+.project-title {
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 4px 4px 36px #555 ;
+    padding: 20px;
+    margin: 10px;
+    height: 370px;
+}
+
+#projects button {
+    --primary-color: #645bff;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-top: 1em;
+    cursor: pointer;
+    box-shadow: 0 8px 6px -6px #555;
+}
+  
+#projects button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#projects button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+  
+#projects button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+  
+#projects button:hover {
+    background-color: var(--hover-color);
+}
+  
+#projects button:hover .arrow {
+    background: var(--secondary-color);
+}
+  
+#projects button:hover .arrow:before {
+    right: 0;
 }
   
 @keyframes right_to_left {
