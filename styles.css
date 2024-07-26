@@ -7,14 +7,14 @@ html, body {
     height: 100%;
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
     display: none;
 }
 
 html {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
+} */
 
 header{
     background: transparent;
@@ -344,6 +344,7 @@ header{
     gap: 0.6em;
     font-weight: bold;
     margin-top: 1em;
+    margin-bottom: 3em;
     cursor: pointer;
     box-shadow: 0 8px 6px -6px #555;
     transition: all .4s ease;
@@ -672,5 +673,15 @@ header{
     }
     to {
       margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-image {
+        visibility: hidden;
+    }
+
+    .projects-content {
+        flex-wrap: wrap;
     }
 }
