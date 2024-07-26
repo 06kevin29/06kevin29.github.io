@@ -676,12 +676,21 @@ header{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .home-image {
         visibility: hidden;
     }
 
     .projects-content {
         flex-wrap: wrap;
+    }
+
+    .project-card {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .projects-content {
+        margin-bottom: 2em;
     }
 }

@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const logo = document.getElementById("logo")
     const hireMe = document.getElementById("hire-button")
 
+    console.log(window.innerWidth)
+
     function smoothScroll(target) {
         window.scrollTo({
             top: target.offsetTop,
@@ -27,22 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('wheel', (e) => {
-        if (isScrolling) return;
+        if (window.innerWidth > 768) {
+          if (isScrolling) return;
 
-        const currentSection = getCurrentSection();
-        let targetSection;
+          const currentSection = getCurrentSection();
+          let targetSection;
 
-        if (e.deltaY > 0) {
+          if (e.deltaY > 0) {
             targetSection = currentSection.nextElementSibling;
-        } else {
+          } else {
             targetSection = currentSection.previousElementSibling;
-        }
-        if (targetSection && targetSection.tagName === 'SECTION') {
+          }
+          if (targetSection && targetSection.tagName === "SECTION") {
             isScrolling = true;
             smoothScroll(targetSection);
             setTimeout(() => {
-                isScrolling = false;
+              isScrolling = false;
             }, 0);
+          }
         }
     });
 
