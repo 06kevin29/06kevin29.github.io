@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcmFhkqAAAAAG-_UClUkIuzcK0SFQ9LmEIMOMDf"></script>
 </head>
 <body>
     <header>
@@ -155,41 +154,28 @@
     </section>
     <section id="contact">
         <h2>Contact Me</h2>
-        <form class="contact-form" action="/form.php" method="POST" id="contactForm">
-            <div class="form-group-container">
-                <div class="form-group">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="61a90e2d-71eb-4cc6-9397-e3d541b45f7d" />
+                <input type="hidden" name="subject" value="New Contact Message" />
+                <input type="hidden" name="from_name" value="06kevin29.github.io" />
+
+                <div class="form-group-container">
+                    <div class="form-group">
                     <label for="name" class="form-label">Name</label>
-                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
-                </div>
-                <div class="form-group">
+                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+                    </div>
+                    <div class="form-group">
                     <label for="email" class="form-label">Email</label>
-                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
-                </div>
-                <div class="form-group">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input id="subject" name="subject" class="form-input" placeholder="Subject" type="text" required />
-                </div>
-                <div class="form-group">
+                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+                    </div>
+                    <div class="form-group">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+                    </div>
                 </div>
-            </div>
-            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
-            <button class="form-submit" type="submit">Send Message</button>
-        </form>
+                <button class="form-submit" type="submit">Send Message</button>
+            </form>
     </section>
-    
-    <script>
-        grecaptcha.ready(function() {
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                grecaptcha.execute('6LcmFhkqAAAAAG-_UClUkIuzcK0SFQ9LmEIMOMDf', {action: 'submit'}).then(function(token) {
-                    document.getElementById('g-recaptcha-response').value = token;
-                    document.getElementById('contactForm').submit();
-                });
-            });
-        });
-    </script>
 
     <noscript>Please enable Javascript!</noscript>
 </body>
